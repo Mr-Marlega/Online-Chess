@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{37662891-9798-3545-29C4-E2E902D93ED3}</ProjectGuid>
+    <ProjectGuid>{7E6C2DEA-15A3-B8B5-65A6-47650862374B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PhotonRealtime</AssemblyName>
@@ -53,25 +53,25 @@
     <UnityVersion>2020.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\LoadbalancingPeer.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\Unity\PhotonAppSettings.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\SupportLogger.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\FriendInfo.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\AppSettings.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\PhotonPingClasses.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\Extensions.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\ConnectionHandler.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\Region.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\WebRpc.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\CustomTypesUnity.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Code\RegionHandler.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Code\Unity\Editor\AccountService.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Code\LoadBalancingClient.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Code\Extensions.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Code\WebRpc.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Code\LoadbalancingPeer.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Code\Region.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Code\SupportLogger.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Code\AppSettings.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Code\FriendInfo.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Code\PhotonPingClasses.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Code\Room.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Code\Unity\PhotonAppSettings.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Code\PhotonPing.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Code\RoomInfo.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\Room.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\Unity\Editor\AccountService.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Code\Player.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Code\ConnectionHandler.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Code\CustomTypesUnity.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Code\Unity\Editor\PhotonEditorUtils.cs" />
-    <Compile Include="Assets\Photon\PhotonRealtime\Code\LoadBalancingClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonRealtime\Code\changes-realtime.txt" />
@@ -312,20 +312,20 @@
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
-    </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.26f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
