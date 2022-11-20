@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d51a17845a58fe347ad498999a72e93b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - BPawn: {fileID: 2800000, guid: fdfae41c003037d41876a1534f59f84b, type: 3}
+  - BRook: {fileID: 2800000, guid: a538b7ffe2dd9b244b82981a4b5e5646, type: 3}
+  - BKnight: {instanceID: 0}
+  - BBishop: {fileID: 2800000, guid: cbedbbef91a6724408ca10193d905dfb, type: 3}
+  - BQueen: {fileID: 2800000, guid: 17f83884bf9c89e43b332a2b3dab6429, type: 3}
+  - BKing: {instanceID: 0}
+  - WPawn: {instanceID: 0}
+  - WRook: {instanceID: 0}
+  - WKnight: {instanceID: 0}
+  - WBishop: {instanceID: 0}
+  - WQueen: {instanceID: 0}
+  - WKing: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
