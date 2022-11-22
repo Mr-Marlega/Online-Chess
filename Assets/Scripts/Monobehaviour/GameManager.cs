@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviourPunCallbacks
     public static GameManager instance = null;
     public AssetManager assetManager;
     public BoardViewController boardViewController;
+    public ChessPlayer MyPlayer;
+    public GameObject chessBoardPrefab;
+    public Transform chessBoardParentTrasform;
     private void Start()
     {
         instance = this;
@@ -21,6 +24,22 @@ public class GameManager : MonoBehaviourPunCallbacks
             return;
         }
         //Instantiating Player On board
+        //Player setting 
+        SetPlayerInfo();
+        GameObject chessBoardObj = Instantiate(chessBoardPrefab, chessBoardParentTrasform);
+        boardViewController = chessBoardObj.GetComponent<BoardViewController>();
+    }
+    void SetPlayerInfo()
+    {
+        MyPlayer = new ChessPlayer();
+        UnityEngine.Debug.LogError("PhotonNetwork.CurrentRoom.PlayerCount : " + PhotonNetwork.CurrentRoom.PlayerCount);
+        if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
+        {
+            MyPlayer.SetPlayerColor(ChessHelper.COLOR.WHITE);
+        }else
+        {
+            MyPlayer.SetPlayerColor(ChessHelper.COLOR.BLACK);
+        }
     }
     void Update()
     {

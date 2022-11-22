@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
- namespace ChesssHelper
+ namespace ChessHelper
 {
     public enum PIECE
     {
@@ -228,7 +228,24 @@ using UnityEngine;
                             _squareList.Add(sqr2);
                         }
                     }
-                }else
+                    if (_sqr.rowIndex() + 1 <= _board.GetMaxRow() && _sqr.colIndex() + 1 <= _board.GetMaxCol())
+                    {
+                         sqr = _board.GetBoardSquareByIndex(_sqr.rowIndex() + 1, _sqr.colIndex() + 1);
+                        if (sqr.Troop.GetPiece() != PIECE.NONE && sqr.Troop.GetPieceColor() != this.GetPieceColor())
+                        {
+                            _squareList.Add(sqr);
+                        }
+                    }
+                    if (_sqr.rowIndex() + 1 <= _board.GetMaxRow() && _sqr.colIndex() - 1 > 0)
+                    {
+                         sqr = _board.GetBoardSquareByIndex(_sqr.rowIndex() + 1, _sqr.colIndex() - 1);
+                        if (sqr.Troop.GetPiece() != PIECE.NONE && sqr.Troop.GetPieceColor() != this.GetPieceColor())
+                        {
+                            _squareList.Add(sqr);
+                        }
+                    }
+                }
+                else
                 {
                     if(_sqr.rowIndex() + 1 <= _board.GetMaxRow())
                     {
@@ -267,6 +284,22 @@ using UnityEngine;
                         if (sqr2.Troop.GetPiece() == PIECE.NONE)
                         {
                             _squareList.Add(sqr2);
+                        }
+                    }
+                    if (_sqr.rowIndex() - 1 > 0 && _sqr.colIndex() + 1 <= _board.GetMaxCol())
+                    {
+                         sqr = _board.GetBoardSquareByIndex(_sqr.rowIndex() - 1, _sqr.colIndex() + 1);
+                        if (sqr.Troop.GetPiece() != PIECE.NONE && sqr.Troop.GetPieceColor() != this.GetPieceColor())
+                        {
+                            _squareList.Add(sqr);
+                        }
+                    }
+                    if (_sqr.rowIndex() - 1 > 0 && _sqr.colIndex() - 1 > 0)
+                    {
+                         sqr = _board.GetBoardSquareByIndex(_sqr.rowIndex() - 1, _sqr.colIndex() - 1);
+                        if (sqr.Troop.GetPiece() != PIECE.NONE && sqr.Troop.GetPieceColor() != this.GetPieceColor())
+                        {
+                            _squareList.Add(sqr);
                         }
                     }
                 }
@@ -609,6 +642,45 @@ using UnityEngine;
                 return true;
             }
             return false;
+        }
+    }
+
+    //Troop Maker
+    public class TroopFactory
+    {
+        public static Troop MakeTroop(PIECE piece, COLOR color)
+        {
+            if(COLOR.WHITE == color)
+            {
+                if (piece == PIECE.PAWN)
+                    return new Pawn(color);
+                if (piece == PIECE.ROOK)
+                    return new Rook(color);
+                if (piece == PIECE.KNIGHT)
+                    return new Knight(color);
+                if (piece == PIECE.BISHOP)
+                    return new Bishop(color);
+                if (piece == PIECE.QUEEN)
+                    return new Queen(color);
+                if (piece == PIECE.KING)
+                    return new King(color);
+            }
+            if (COLOR.BLACK == color)
+            {
+                if (piece == PIECE.PAWN)
+                    return new Pawn(color);
+                if (piece == PIECE.ROOK)
+                    return new Rook(color);
+                if (piece == PIECE.KNIGHT)
+                    return new Knight(color);
+                if (piece == PIECE.BISHOP)
+                    return new Bishop(color);
+                if (piece == PIECE.QUEEN)
+                    return new Queen(color);
+                if (piece == PIECE.KING)
+                    return new King(color);
+            }
+            return new Troop();
         }
     }
 }

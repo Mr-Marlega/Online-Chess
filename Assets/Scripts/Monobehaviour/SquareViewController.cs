@@ -1,4 +1,4 @@
-using ChesssHelper;
+using ChessHelper;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,6 +23,17 @@ public class SquareViewController : MonoBehaviour
     {
         bgImage.rectTransform.sizeDelta = new Vector2(dim, dim);
         TroopImage.rectTransform.sizeDelta = new Vector2(dim, dim);
+    }
+    public void SetTroopImageRotation(COLOR _color)
+    {
+        if(_color == COLOR.BLACK)
+        {
+            TroopImage.transform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, 180f));
+        }
+        if(_color == COLOR.WHITE)
+        {
+            TroopImage.transform.localRotation = Quaternion.identity;
+        }
     }
     public void setSquarePos(float rowPos, float colPos)
     {

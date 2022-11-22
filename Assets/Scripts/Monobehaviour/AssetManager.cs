@@ -20,25 +20,25 @@ public class AssetManager : MonoBehaviour
 
     public Sprite None;
 
-    public Sprite GetTroopImage(ChesssHelper.PIECE piece, ChesssHelper.COLOR color)
+    public Sprite GetTroopImage(ChessHelper.PIECE piece, ChessHelper.COLOR color)
     {
-        if(color == ChesssHelper.COLOR.BLACK)
+        if(color == ChessHelper.COLOR.BLACK)
         {
-            if (piece == ChesssHelper.PIECE.PAWN) return BPawn;
-            if (piece == ChesssHelper.PIECE.ROOK) return BRook;
-            if (piece == ChesssHelper.PIECE.KNIGHT) return BKnight;
-            if (piece == ChesssHelper.PIECE.BISHOP) return BBishop;
-            if (piece == ChesssHelper.PIECE.QUEEN) return BQueen;
-            if (piece == ChesssHelper.PIECE.KING) return BKing;
+            if (piece == ChessHelper.PIECE.PAWN) return BPawn;
+            if (piece == ChessHelper.PIECE.ROOK) return BRook;
+            if (piece == ChessHelper.PIECE.KNIGHT) return BKnight;
+            if (piece == ChessHelper.PIECE.BISHOP) return BBishop;
+            if (piece == ChessHelper.PIECE.QUEEN) return BQueen;
+            if (piece == ChessHelper.PIECE.KING) return BKing;
         }
-        if (color == ChesssHelper.COLOR.WHITE)
+        if (color == ChessHelper.COLOR.WHITE)
         {
-            if (piece == ChesssHelper.PIECE.PAWN) return WPawn;
-            if (piece == ChesssHelper.PIECE.ROOK) return WRook;
-            if (piece == ChesssHelper.PIECE.KNIGHT) return WKnight;
-            if (piece == ChesssHelper.PIECE.BISHOP) return WBishop;
-            if (piece == ChesssHelper.PIECE.QUEEN) return WQueen;
-            if (piece == ChesssHelper.PIECE.KING) return WKing;
+            if (piece == ChessHelper.PIECE.PAWN) return WPawn;
+            if (piece == ChessHelper.PIECE.ROOK) return WRook;
+            if (piece == ChessHelper.PIECE.KNIGHT) return WKnight;
+            if (piece == ChessHelper.PIECE.BISHOP) return WBishop;
+            if (piece == ChessHelper.PIECE.QUEEN) return WQueen;
+            if (piece == ChessHelper.PIECE.KING) return WKing;
         }
         return None;
     }
